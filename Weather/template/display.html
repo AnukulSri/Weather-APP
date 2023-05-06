@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body>
+    <center>
+        <h1>Displaying The Data Stored In DB</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Roll no.</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+            {% for i in ob %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.roll}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.mob}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+        <button><a href="static">Back to Home Page</a></button>
+    </center>
+</body>
+
+</html>
