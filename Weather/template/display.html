@@ -20,6 +20,7 @@
                 <th>Roll no.</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Action</th>
             </tr>
             {% for i in ob %}
             <tr>
@@ -27,6 +28,11 @@
                 <td>{{i.roll}}</td>
                 <td>{{i.email}}</td>
                 <td>{{i.mob}}</td>
+
+                <td>
+                    <button><a style="text-decoration: none; color:black" href="edit/{{i.roll}}">Edit</a></button>
+                    <button><a style="text-decoration: none; color:black" href="discard/{{i.roll}}">Delete</a></button>
+                </td>
             </tr>
             {% endfor %}
 
